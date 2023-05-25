@@ -141,7 +141,7 @@ const Room = ({ params }: ParamsProps) => {
                             </h1>
                             <CirclePicker
                                 color={color}
-                                onChange={(e) => setColor(e.hex)}
+                                onChange={(e:any) => setColor(e.hex)}
                             />
                         </div>
                         {/*         Size Picker     */}
