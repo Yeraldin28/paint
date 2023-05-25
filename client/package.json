@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@keystone-6/core": "^5.2.0",
     "@next/font": "^13.0.5",
+    "@piwikpro/react-piwik-pro": "^1.1.1",
     "@tailwindcss/forms": "^0.5.2",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
@@ -21,7 +23,7 @@
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "nanoid": "^4.0.0",
-    "next": "~13.1.6",
+    "next": "13.3.5-canary.3",
     "next-compose-plugins": "^2.2.1",
     "react": "^18.2.0",
     "react-color": "^2.19.3",
