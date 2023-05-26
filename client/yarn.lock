@@ -7446,7 +7446,7 @@ next@^13.3.0:
     "@next/swc-win32-ia32-msvc" "13.4.3"
     "@next/swc-win32-x64-msvc" "13.4.3"
 
-next@^13.3.4:
+next@~13.3.4:
   version "13.3.4"
   resolved "https://registry.npmjs.org/next/-/next-13.3.4.tgz"
   integrity sha512-sod7HeokBSvH5QV0KB+pXeLfcXUlLrGnVUXxHpmhilQ+nQYT3Im2O8DswD5e4uqbR8Pvdu9pcWgb1CbXZQZlmQ==
