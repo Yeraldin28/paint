@@ -1,0 +1,152 @@
+ npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+2:55:28 PM: npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+2:55:29 PM: npm WARN deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+2:55:29 PM: npm WARN deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+2:55:29 PM: npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+2:55:31 PM: npm WARN deprecated cuid@2.1.8: Cuid and other k-sortable and non-cryptographic ids (Ulid, ObjectId, KSUID, all UUIDs) are all insecure. Use @paralleldrive/cuid2 instead.
+2:55:31 PM: npm WARN deprecated @zeit/next-css@1.0.1: Next.js now has built-in support for CSS: https://nextjs.org/docs/basic-features/built-in-css-support. The built-in support solves many bugs and painpoints that the next-css plugin had.
+2:55:34 PM: npm WARN deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+2:55:35 PM: npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2:55:50 PM: added 1657 packages, and audited 1658 packages in 26s
+2:55:50 PM: 196 packages are looking for funding
+2:55:50 PM:   run `npm fund` for details
+2:55:50 PM: 13 vulnerabilities (8 moderate, 5 high)
+2:55:50 PM: To address issues that do not require attention, run:
+2:55:50 PM:   npm audit fix
+2:55:50 PM: Some issues need review, and may require choosing
+2:55:50 PM: a different dependency.
+2:55:50 PM: Run `npm audit` for details.
+2:55:50 PM: > next-paint@0.1.0 build
+2:55:50 PM: > next build
+2:55:51 PM: warn  - You have enabled experimental feature (appDir) in next.config.js.
+2:55:51 PM: warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+2:55:51 PM: info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
+2:55:51 PM: info  - Creating an optimized production build...
+2:55:58 PM: Failed to compile.
+2:55:58 PM: 
+2:55:58 PM: ./app/globals.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!./app/globals.css
+2:55:58 PM: Error: Cannot find module 'tailwindcss'
+2:55:58 PM: Require stack:
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-config.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-build/impl.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-build/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/cli/next-build.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/lib/commands.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/bin/next
+2:55:58 PM:     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1026:15)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/server/require-hook.js:108:36
+2:55:58 PM:     at Function.resolve (node:internal/modules/cjs/helpers:114:19)
+2:55:58 PM:     at loadPlugin (/opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:54:32)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:162:56
+2:55:58 PM:     at Array.map (<anonymous>)
+2:55:58 PM:     at getPostCssPlugins (/opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:162:47)
+2:55:58 PM:     at async /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/index.js:124:36
+2:55:58 PM:     at async /opt/build/repo/client/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js:51:41
+2:55:58 PM:     at async Span.traceAsyncFn (/opt/build/repo/client/node_modules/next/dist/trace/trace.js:103:20)
+2:55:58 PM: Import trace for requested module:
+2:55:59 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+2:55:58 PM: ./app/globals.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!./app/globals.css
+2:55:58 PM: ./app/globals.css
+2:55:58 PM: ./app/layout.tsx
+2:55:58 PM: ./app/globals.css
+2:55:58 PM: Error: Cannot find module 'tailwindcss'
+2:55:58 PM: Require stack:
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-config.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-build/impl.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-build/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/cli/next-build.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/lib/commands.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/bin/next
+2:55:58 PM:     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1026:15)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/server/require-hook.js:108:36
+2:55:58 PM:     at Function.resolve (node:internal/modules/cjs/helpers:114:19)
+2:55:58 PM:     at loadPlugin (/opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:54:32)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:162:56
+2:55:58 PM:     at Array.map (<anonymous>)
+2:55:58 PM:     at getPostCssPlugins (/opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:162:47)
+2:55:58 PM:     at async /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/index.js:124:36
+2:55:58 PM:     at async /opt/build/repo/client/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js:51:41
+2:55:58 PM:     at async Span.traceAsyncFn (/opt/build/repo/client/node_modules/next/dist/trace/trace.js:103:20)
+2:55:58 PM:     at tryRunOrWebpackError (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:308539)
+2:55:58 PM:     at __webpack_require_module__ (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:130357)
+2:55:58 PM:     at __nested_webpack_require_153265__ (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:129784)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:130649
+2:55:58 PM:     at symbolIterator (/opt/build/repo/client/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+2:55:58 PM:     at done (/opt/build/repo/client/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+2:55:58 PM:     at Hook.eval [as callAsync] (eval at create (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:13:28771), <anonymous>:15:1)
+2:55:58 PM:     at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:13:25925)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:129504
+2:55:58 PM:     at symbolIterator (/opt/build/repo/client/node_modules/next/dist/compiled/neo-async/async.js:1:14402)
+2:55:58 PM: -- inner error --
+2:55:58 PM: Error: Cannot find module 'tailwindcss'
+2:55:58 PM: Require stack:
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack/config/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-config.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-build/impl.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/webpack-build/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/build/index.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/cli/next-build.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/lib/commands.js
+2:55:58 PM: - /opt/build/repo/client/node_modules/next/dist/bin/next
+2:55:58 PM:     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1026:15)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/server/require-hook.js:108:36
+2:55:58 PM:     at Function.resolve (node:internal/modules/cjs/helpers:114:19)
+2:55:58 PM:     at loadPlugin (/opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:54:32)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:162:56
+2:55:58 PM:     at Array.map (<anonymous>)
+2:55:58 PM:     at getPostCssPlugins (/opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:162:47)
+2:55:58 PM:     at async /opt/build/repo/client/node_modules/next/dist/build/webpack/config/blocks/css/index.js:124:36
+2:55:58 PM:     at async /opt/build/repo/client/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js:51:41
+2:55:58 PM:     at async Span.traceAsyncFn (/opt/build/repo/client/node_modules/next/dist/trace/trace.js:103:20)
+2:55:58 PM:     at Object.<anonymous> (/opt/build/repo/client/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!/opt/build/repo/client/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!/opt/build/repo/client/app/globals.css:1:7)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:901184
+2:55:58 PM:     at Hook.eval [as call] (eval at create (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:13:28549), <anonymous>:7:1)
+2:55:58 PM:     at Hook.CALL_DELEGATE [as _call] (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:13:25819)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:130390
+2:55:58 PM:     at tryRunOrWebpackError (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:308493)
+2:55:58 PM:     at __webpack_require_module__ (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:130357)
+2:55:58 PM:     at __nested_webpack_require_153265__ (/opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:129784)
+2:55:58 PM:     at /opt/build/repo/client/node_modules/next/dist/compiled/webpack/bundle5.js:28:130649
+2:55:58 PM:     at symbolIterator (/opt/build/repo/client/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+2:55:58 PM: Generated code for /opt/build/repo/client/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!/opt/build/repo/client/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!/opt/build/repo/client/app/globals.css
+2:55:58 PM: Import trace for requested module:
+2:55:58 PM: ./app/globals.css
+2:55:58 PM: ./app/layout.tsx
+2:55:58 PM: > Build failed because of webpack errors
+2:55:58 PM: ​
+2:55:58 PM: "build.command" failed                                        
+2:55:58 PM: ────────────────────────────────────────────────────────────────
+2:55:58 PM: ​
+2:55:58 PM:   Error message
+2:55:58 PM:   Command failed with exit code 1: cd client && npm install && npm run build (https://ntl.fyi/exit-code-1)
+2:55:58 PM: ​
+2:55:58 PM:   Error location
+2:55:58 PM:   In build.command from netlify.toml:
+2:55:58 PM:   cd client && npm install && npm run build
+2:55:58 PM: ​
+2:55:58 PM:   Resolved config
+2:55:58 PM:   build:
+2:55:58 PM:     command: cd client && npm install && npm run build
+2:55:58 PM:     commandOrigin: config
+2:55:58 PM:     environment:
+2:55:58 PM:       - NODE_ENV
+2:55:58 PM:       - NEXT_PRIVATE_TARGET
+2:55:58 PM:     publish: /opt/build/repo/client/.next
+2:55:58 PM:     publishOrigin: config
+2:55:58 PM:   plugins:
+2:55:58 PM:     - inputs: {}
+2:55:58 PM:       origin: ui
+2:55:58 PM:       package: '@netlify/plugin-nextjs'
+2:55:59 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+2:55:59 PM: Failing build: Failed to build site
+2:55:59 PM: Finished processing build request in 53.158s
