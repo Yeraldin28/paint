@@ -1,5 +1,5 @@
 "use client"
-
+import React from 'react';
 import { useContext, useEffect, useState } from "react"
 import { customAlphabet } from "nanoid"
 import { UserContext } from "../components/ContextProvider"
