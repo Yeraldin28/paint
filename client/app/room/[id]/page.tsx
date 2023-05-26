@@ -1,5 +1,5 @@
 "use client"
-
+import React from 'react';
 import { useEffect, useRef, useState } from "react"
 import useDraw from "../../../hooks/useDraw"
 import { CirclePicker } from "react-color"
