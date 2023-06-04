@@ -1,5 +1,5 @@
 "use client"
-
+// se utiliza para obtener el tamaño deseado de un lienzo (canvas)
 const getCanvasSize = () => {
     const screenWidth = window.screen.width
     if (screenWidth > 1024) return { width: 750, height: 750 }

@@ -1,3 +1,8 @@
+// utiliza para dibujar en un lienzo (canvas)
+// utilizando el contexto de dibujo (ctx),
+// los puntos actuales (currentPoints),
+// los puntos previos (prePoints),
+// el color de línea (color) y el tamaño de línea (size).
 interface OnDrawColor extends SizeProps, OnDraw {
     color: string
 }

@@ -1,7 +1,8 @@
-module.exports = {
-    pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-    pages: {
-        '/': 'client/app/page.tsx', // Ruta de la página de inicio (index)
-      },
-  };
-  
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
+}
+
+module.exports = nextConfig

@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react"
 
+// . Esta función será invocada cuando ocurra un evento de dibujo en el lienzo
 const useDraw = (
     onDraw: ({ ctx, prePoints, currentPoints }: OnDraw) => void
 ) => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
+// se utiliza para mantener un seguimiento del punto previo dibujado en el lienzo.
     const prePoint = useRef<null | Points>(null)
-
+// que indica si el botón del mouse está presionado o no.
     const [isMouseDown, setIsMouseDown] = useState(false)
 
     const onMouseDown = () => setIsMouseDown(true)
-
+// que se utiliza para limpiar el lienzo
     const handleClear = () => {
         const canvas = canvasRef.current
         if (!canvas) return
@@ -19,9 +21,10 @@ const useDraw = (
 
         ctx.clearRect(0, 0, canvas.width, canvas.height)
     }
-
+// maneja los eventos de dibujo en el lienzo.
     useEffect(() => {
         const handleMouseDown = (e: MouseEvent) => {
+            // Código del manejo del evento mousedown
             if (!isMouseDown) return
 
             const currentPoints = getCurrentPoints(e)
@@ -35,6 +38,7 @@ const useDraw = (
         }
 
         const getCurrentPoints = (e: MouseEvent) => {
+            // Código para obtener las coordenadas actuales del evento
             const canvas = canvasRef.current
 
             if (!canvas) return
@@ -47,6 +51,7 @@ const useDraw = (
         }
 
         const handleMouseUp = () => {
+            // Código del manejo del evento mouseup
             setIsMouseDown(false)
             prePoint.current = null
         }
