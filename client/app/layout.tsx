@@ -1,6 +1,5 @@
 "use client"
 
-import "./globals.css"
 import ContextProvider from "../components/ContextProvider"
 
 export default function RootLayout({
