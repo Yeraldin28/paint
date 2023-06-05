@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react"
 import { customAlphabet } from "nanoid"
 import { UserContext } from "../components/ContextProvider"
 import { useRouter } from "next/navigation"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function Home() {
   // Genera una función personalizada para generar IDs únicos
@@ -46,44 +48,42 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen py-10 bg-gradient-to-br from-purple-900 to-blue-900">
-      {/* Título */}
-      <h1 className="p-2 mx-auto text-3xl font-bold text-center text-white md:text-5xl w-max font-sans" >
-                Pinturillo
-        </h1>
-      <div className="flex flex-col p-6 mx-auto mt-20 rounded-lg borer-2 glass md:p-10 gap-y-6 w-max ">
-        <input
-          type="text"
-          placeholder="Nombre *"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="p-2 text-lg border-2 border-black rounded-md w-60 md:w-80 outline-0 btn-shadow font-sans "
-        />
-        {nameError && <p className="text-red-600">Ingresa un nombre</p>}
-        <input
-          type="text"
-          placeholder="ID de la sala"
-          value={joinId}
-          onChange={(e) => setJoinId(e.target.value.toUpperCase())}
-          className="p-2 text-lg border-2 border-black rounded-md w-60 md:w-80 outline-0 btn-shadow font-sans"
-        />
-        {joinIdError && (
-          <p className="text-red-600">Ingresa un ID de sala válido</p>
+    <main className="d-flex align-items-center justify-content-center min-vh-100 bg-gradient" >
+    {/* Título */}
+    <div className="d-flex flex-column p-6 mx-auto mt-20 rounded-lg border-2 glass md:p-10 gap-4 w-max bg-black bg-opacity-50 p-4">
+    <h1 className="text-center text-white mb-4">Pinturillo</h1>
+      <input
+        type="text"
+        placeholder="Nombre *"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="p-2 form-control rounded-md w-60 md:w-80"
+      />
+      {nameError && <p className="text-white">Ingresa un nombre</p>}
+      <input
+        type="text"
+        placeholder="ID de la sala"
+        value={joinId}
+        onChange={(e) => setJoinId(e.target.value.toUpperCase())}
+        className="p-2 form-control rounded-md w-60 md:w-80"
+      />
+      {joinIdError && (
+      <p className="text-white">Ingresa un ID de sala válido</p>
         )}
 
-        <button
-          onClick={handleJoinRoom}
-          className="block w-full p-2 mx-auto text-2xl font-sans text-center text-white transition-all bg-blue-500 rounded-md md:text-3xl btn-shadow hover:scale-105 active:scale-90"
-        >
-          Unirse a la sala
-        </button>
-        <button
-          onClick={handleCreateRoom}
-          className="block w-full p-2 mx-auto text-2xl font-sans text-center text-white transition-all rounded-md bg-emerald-500 md:text-3xl btn-shadow hover:scale-105 active:scale-90"
-        >
-          Crear sala
-        </button>
-      </div>
-    </main>
+      <button
+        onClick={handleJoinRoom}
+        className="btn btn-primary btn-lg btn-block mt-4"
+      >
+        Unirse a la sala
+      </button>
+      <button
+        onClick={handleCreateRoom}
+        className="btn btn-success btn-lg btn-block"
+      >
+        Crear sala
+      </button>
+    </div>
+  </main>
   )
 }

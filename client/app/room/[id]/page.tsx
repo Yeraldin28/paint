@@ -9,6 +9,7 @@ import { UserContext } from "../../../components/ContextProvider"
 import RoomMembers from "../../../components/RoomMembers"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const serverUrl =
     process.env.NODE_ENV === "production"
@@ -120,70 +121,89 @@ const Room = ({ params }: ParamsProps) => {
     }, [canvasRef])
 
     return (
-        <main className="min-h-screen py-10 bg-gradient-to-br from-purple-900 to-blue-900">
-          <div className="container mx-auto">
-            <Link href={"/"}>
-              <h1 className="p-2 mx-auto text-3xl font-bold text-center text-white md:text-5xl w-max font-sans" >
-                Pinturillo
-              </h1>
-            </Link>
-            <h1 className="p-2 mx-auto text-3xl font-bold text-center text-white md:text-5xl w-max font-sans" >
-              ID de la Sala: {roomId}
-            </h1>
-            <div className="flex flex-col items-center justify-center mt-8">
-              <div className="flex p-4 bg-white border-2 border-black rounded-lg gap-x-6">
-                <div>
-                  <h1 className="pb-3 text-xl text-center text-gray-800 font-sans">
-                    Elija un color
+          <main className="min-h-screen py-10 bg-gradient-to-br from-purple-900 to-blue-900">
+            <div className="container mx-auto">
+              <div className="row ">
+                <div className="col-lg-3  d-flex align-items-center justify-content-center ">
+                  <RoomMembers members={membersState} />
+                </div>
+                <div className="col-lg-9">
+                  <h1 className="p-2 mx-auto text-3xl font-bold text-center text-white md:text-5xl w-max font-sans">
+                    Pinturillo
                   </h1>
-                  <CirclePicker
-                    color={color}
-                    onChange={(e:any) => setColor(e.hex)}
-                  />
-                </div>
-                <div>
-                  <h1 className="pb-3 text-xl text-center text-gray-800 font-sans">Tamaño</h1>
-                  <div
-                    style={{ color: color }}
-                    className="flex flex-col items-center justify-center gap-y-5"
-                  >
-                    <ColorCircle
-                      style={"small"}
-                      size={size}
-                      setSize={setSize}
-                    />
-                    <ColorCircle
-                      style={"mid"}
-                      size={size}
-                      setSize={setSize}
-                    />
-                    <ColorCircle
-                      style={"large"}
-                      size={size}
-                      setSize={setSize}
-                    />
+                <h1 className="p-2 mx-auto text-3xl font-bold text-center text-white md:text-5xl w-max font-sans">
+                  ID de la Sala: {roomId}
+                </h1>
+                <div className="d-flex flex-column align-items-center justify-content-center mt-8">
+                  <div className="d-flex p-4 bg-black bg-opacity-50 border-2 border-black rounded-lg gap-3">
+                    <div>
+                      <h1 className="pb-3 text-xl text-center font-sans text-white">
+                        Elija un color
+                      </h1>
+                      <CirclePicker
+                        color={color}
+                        onChange={(e:any) => setColor(e.hex)}
+                      />
+                    </div>
+                    <div>
+                      <h1 className="pb-3 text-xl text-center text-white font-sans">Tamaño</h1>
+                      <div
+                      style={{ color: color }}
+                      className="flex p-4 d-flex justify-content-center  flex-col items-center justify-center gap-y-5"
+                    >
+                      <div className="p-3 mx-auto my-auto">
+                        <ColorCircle
+                        style={"small"}
+                        size={size}
+                        setSize={setSize}
+                      />
+                      </div>
+                      
+                      <div className="p-3 mx-auto my-auto">
+                        <ColorCircle
+                        style={"mid"}
+                        size={size}
+                        setSize={setSize}
+                      />
+                      </div>
+                      <div className="p-3 mx-auto my-auto">
+                      <ColorCircle
+                        style={"large"}
+                        size={size}
+                        setSize={setSize}
+                      />
+                      </div>
+
+                    </div>
+                    </div>
+                    <button
+                      onClick={() => socket.emit("handleClear", roomId)}
+                      className="btn btn-primary"
+                    >
+                      Limpiar
+                    </button>
                   </div>
+                  <canvas
+                    ref={canvasRef}
+                    onMouseDown={onMouseDown}
+                    className="bg-white border-4 border-black rounded-md mt-4"
+                    width={canvasSize.width}
+                    height={canvasSize.height}
+                  />
+                   <Link href={"/"}>
+                   <button
+                    className="btn btn-primary btn-lg btn-block mt-4"
+                  >
+                    Atras
+                  </button>
+                </Link>
                 </div>
-                <button
-                  onClick={() => socket.emit("handleClear", roomId)}
-                  className="px-8 py-2 m-2 bg-white border-2 border-black rounded-md text-gray-800 font-sans"
-                >
-                  Limpiar
-                </button>
               </div>
-              <canvas
-                ref={canvasRef}
-                onMouseDown={onMouseDown}
-                className="bg-white border-4 border-black rounded-md mt-8"
-                width={canvasSize.width}
-                height={canvasSize.height}
-              />
-              <RoomMembers members={membersState} />
             </div>
-          </div>
-        </main>
-      )
-      
+            </div>
+                       
+          </main>
+        )
 }
 
 export default Room
@@ -197,12 +217,11 @@ const ColorCircle = ({ style, setSize, size }: ColorCicleProps) => {
     }
 
     return (
-        <div
-            onClick={handleSize}
-            style={{ width: `${circleSize}rem`, height: `${circleSize}rem` }}
-            className={` text-inherit rounded-full hover:scale-125 transition-all cursor-pointer
-            ${size === brushSize ? "border-[3px] border-current" : "bg-current"}
-            `}
-        ></div>
+    <div
+      onClick={handleSize}
+      style={{ width: `${circleSize}rem`, height: `${circleSize}rem` }}
+      className={`rounded-circle hover:scale-125 transition-all cursor-pointer ${size === brushSize ? "border-4 bg-gray border border-white" : "bg-white"}`}
+    ></div>
+
     )
 }

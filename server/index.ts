@@ -25,7 +25,7 @@ interface Points {
     y: number
 }
 
-io.on("connection", (socket) => {
+io.on("connection", (socket:any) => {
     socket.on("join-room", ({ roomId }: { roomId: string }) => {
         socket.join(roomId)
     })
